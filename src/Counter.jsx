@@ -1,7 +1,7 @@
 import useStore from "./Store";
 
 const Counter = () => {
-  const { counter, inCrease, deCrease, addByten, remByten, reSet  } = useStore();
+  const { counter, inCrease, deCrease, addByten, remByten, reSet } = useStore();
   return (
     <>
       <div className="w-full h-auto bg-gray-500 p-6 ">
@@ -12,12 +12,21 @@ const Counter = () => {
           <p>Count is: {counter}</p>
         </div>
         <div className="w-[250px] h-auto p-2 flex flex-col justify-start items-start gap-2 ">
-          <button className="extra-button" onClick={inCrease}>INCREASE</button>
-          <button className="extra-button" onClick={deCrease}>DECREASE</button>
-          <button className="extra-button" onClick={()=> addByten(10)}>PLUSE 10</button>
-          <button className="extra-button" onClick={()=> remByten(10)}>MINUS 10</button>
-          <button className="extra-button" onClick={reSet}>RESET 0</button>
-        
+          <button className="extra-button" onClick={inCrease}>
+            INCREASE
+          </button>
+          <button className="extra-button" onClick={deCrease}>
+            DECREASE
+          </button>
+          <button className="extra-button" onClick={() => addByten(10)}>
+            PLUSE 10
+          </button>
+          <button className="extra-button" onClick={() => remByten(10)}>
+            MINUS 10
+          </button>
+          <button className="extra-button" onClick={reSet}>
+            RESET 0
+          </button>
         </div>
       </div>
     </>
