@@ -1,19 +1,27 @@
-import useStore from "./Store"
+import useStore from "./Store";
 
 const Counter = () => {
-  const {counter, inCrease, deCrease} = useStore()
+  const { counter, inCrease, deCrease, addByten, remByten, reSet  } = useStore();
   return (
-   <>
-   <div className="w-full h-auto flex flex-col  space-y-3 p-3 bg-gray-400">
-    <div className="w-[150px] h-auto p-1 rounded-md bg-green-200 flex items-center justify-center"><p>Count is: {counter}</p></div>
-    <div className="w-[100px] h-auto " >
-    <button className="bg-purple-400 py-1 px-2 rounded-md text-zinc-800 hover:bg-blue-500 " onClick={inCrease}>Increase</button>
-    <button className="bg-purple-400 py-1 px-2 rounded-md text-zinc-800 hover:bg-blue-500 mt-3" onClick={deCrease}>Decrease</button>
-    </div>
-     
-   </div>
-   </>
-  )
-}
+    <>
+      <div className="w-full h-auto bg-gray-500 p-6 ">
+        <div>
+          <img className="my-svg" src="/load.svg" alt="" />
+        </div>
+        <div className="bg-red-200 w-[300px] h-auto flex justify-center items-center p-2 text-2xl text-zinc-700">
+          <p>Count is: {counter}</p>
+        </div>
+        <div className="w-[250px] h-auto p-2 flex flex-col justify-start items-start gap-2 ">
+          <button className="extra-button" onClick={inCrease}>INCREASE</button>
+          <button className="extra-button" onClick={deCrease}>DECREASE</button>
+          <button className="extra-button" onClick={()=> addByten(10)}>PLUSE 10</button>
+          <button className="extra-button" onClick={()=> remByten(10)}>MINUS 10</button>
+          <button className="extra-button" onClick={reSet}>RESET 0</button>
+        
+        </div>
+      </div>
+    </>
+  );
+};
 
-export default Counter
+export default Counter;

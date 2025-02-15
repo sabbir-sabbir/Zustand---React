@@ -1,3 +1,11 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.extra-button {
+    @apply  p-2 w-[200px]  bg-sky-500 text-[14px] text-white  hover:bg-sky-300 hover:text-zinc-800;
+  }
+
+.my-svg {
+  @apply w-24 h-24 absolute top-0 right-0 mr-[300px] mt-[150px]  animate-spin [animation-duration:5s]
+}
