@@ -1,8 +1,13 @@
-import React from 'react'
+import useStore from "./Store"
 
 const Counter = () => {
+  const {counter, inCrease, deCrease} = useStore()
   return (
-    <div>Counter</div>
+   <>
+   <div>
+    <div><p>Count is: {counter}</p></div>
+   </div>
+   </>
   )
 }
 
